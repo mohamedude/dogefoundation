@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ page.title }} - The Dogecoin Foundation</title>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="description" content="{{ page.description }}" />
+  {% include htmlheader.html %}
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-static-top" style="min-height: 340px; background-color: #f2ede0; background-image: url('/img/img_7823_wide.jpg'); background-repeat: no-repeat; background-size: cover; background-position: right; padding-bottom: 40px;">
+  <a id="1"></a>
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="navbar-header navbarNew">
+        <a href="/" class="navbar-brand navbar-colorchange" style="padding: 0px;"><img style="padding-top: 20px;" class="img-responsive" src="/img/foundation_s.png" alt="Dogecoin Foundation"></a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      {% include navbar.html %}
+    </div>
+  </div>
+  <div class="container" style="padding-bottom: 50px;">
+    <!-- <img style="padding-top: 30px;" class="img-responsive center-block" src="/img/foundationmed.png" alt="Dogecoin Foundation"> -->
+    <h1 class="white">{{ page.title }}</h2>
+    <div id="buttonDiv"><!--
+      <div class="btn-homeDiv">
+        <a class="btn btn-primary btn-lg btn-home" href="/projects">Make a donation today!</a>   
+      </div>
+      <div class="btn-homeDiv">
+        <a class="btn btn-primary btn-lg btn-home" href="/projects">View our initiatives</a>
+      </div>-->
+    </div>
+  </div>
+</div>
+
+
+{{ content }}
+
+{% include footer.html %}
+
+</body>
+</html>

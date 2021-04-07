@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div id="content" class="container">
+  <div class="row">
+    {% assign columns = content | split:'<!-- column -->' %}
+
+    <div class="col-xs-12 col-md-8">
+      {% assign sections = columns.first | split:'<!-- section -->' %}
+      {% for section in sections %}
+
+
+        <div class="row">
+          <div class="col-xs-12">{{ section }}</div>
+        </div>
+
+        {% if forloop.last == false %}
+        <hr class="fadein-line" />
+        {% endif %}
+
+      {% endfor %}
+    </div>
+    <div class="col-xs-12 col-md-4 text-right">
+
+      {% assign sections = columns.last | split:'<!-- section -->' %}
+
+      {% for section in sections %}
+
+      <div class="row">
+        <div class="col-xs-12">{{ section }}</div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
